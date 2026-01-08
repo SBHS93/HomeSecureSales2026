@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Sale – HomeSecure</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .form-container {
+            width: 92%;
+            max-width: 650px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: #004053;
+        }
+
+        label {
+            display: block;
+            font-size: 20px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            border-radius: 10px;
+            border: 2px solid rgba(0,0,0,0.2);
+            font-size: 20px;
+            margin-top: 8px;
+        }
+
+        .submit-btn {
+            margin-top: 30px;
+            width: 100%;
+            padding: 16px;
+            background: #F36E21;
+            color: white;
+            font-size: 24px;
+            font-weight: 800;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #FDB71A;
+            color: black;
+        }
+
+        .success-message {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: 800;
+            color: green;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <span class="title">Add Sale</span>
+    <a href="index.html" class="add-sale-btn" style="background:#004053;">Back</a>
+</header>
+
+<div class="form-container">
+    <h2>Record a Sale</h2>
+
+    <label for="agent">Agent</label>
+    <select id="agent">
+        <option value="">Select agent</option>
+        <option>Bradley</option>
+        <option>Craig</option>
+        <option>Jamie</option>
+        <option>John</option>
+        <option>Johnny</option>
+        <option>Keith</option>
+        <option>Lar</option>
+        <option>Ross</option>
+        <option>Shane</option>
+    </select>
+
+    <label for="upfront">Upfront (€)</label>
+    <input type="number" id="upfront" step="0.01">
+
+    <label for="monitoring">Monitoring (€)</label>
+    <input type="number" id="monitoring" step="0.01">
+
+    <label for="date">Date</label>
+    <input type="date" id="date" value="">
+
+    <button id="submit-sale" class="submit-btn">Submit Sale</button>
+
+    <div class="success-message" id="success-message">
+        Sale Saved Successfully 🎉
+    </div>
+</div>
+
+<script type="module" src="js/form.js"></script>
+
+</body>
+</html>

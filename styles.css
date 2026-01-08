@@ -1,0 +1,300 @@
+/* ===========================================================
+   HOMSECURE SALES DASHBOARD — BOLD THEME (TV OPTIMIZED)
+   Branding Colors:
+   Teal:     #004053
+   Orange:   #F36E21
+   Yellow:   #FDB71A
+   Light BG: #e8eff1
+   Green:    #2ecc71
+   =========================================================== */
+
+/* GLOBAL --------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background: #e8eff1; /* Light teal tint */
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #004053;
+}
+
+/* HEADER --------------------------------------------------- */
+header {
+    background: #004053;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+header .title {
+    font-size: 50px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.add-sale-btn {
+    background: #F36E21;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+.add-sale-btn:hover {
+    background: #FDB71A;
+    color: black;
+}
+
+/* CONTAINER ------------------------------------------------ */
+.container {
+    width: 92%;
+    margin: 18px auto;
+}
+
+/* KPI CARDS ------------------------------------------------ */
+.kpi-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    margin-bottom: 1px;
+}
+
+.kpi-card {
+    flex: 1;
+    padding: 8px 20px;
+    border-radius: 16px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+    color: white;
+    text-align: center;
+}
+
+/* CARD COLORS (Option A1) */
+.kpi-card:nth-child(1) { background: #F36E21; } /* Daily */
+.kpi-card:nth-child(2) { background: #004053; } /* Weekly */
+.kpi-card:nth-child(3) { background: #FDB71A; color: black; } /* Monthly */
+.kpi-card:nth-child(4) { background: #F36E21; } /* Avg Revenue */
+.kpi-card:nth-child(5) { background: #004053; } /* Avg Upfront */
+
+.kpi-card .label {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.kpi-card .value {
+    font-size: 56px;
+    font-weight: 900;
+    margin-top: 0.5px;
+}
+
+/* KPI TARGET + PROGRESS BARS ---------------------------------- */
+.kpi-target {
+    margin-top: 0.5px;
+}
+
+.kpi-target span {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Outer bar */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 10px;
+    margin-top: 0.5px;
+}
+
+/* Inner dynamic bar */
+.progress-inner {
+    height: 100%;
+    width: 0%;
+    background: #F36E21;
+    border-radius: 10px;
+    transition: width 0.6s ease-in-out, background 0.4s ease-in-out;
+}
+
+/* TEAM TITLES ---------------------------------------------- */
+.team-title {
+    margin-top: 1px;
+    font-size: 38px;
+    font-weight: 900;
+    color: #004053;
+    text-transform: uppercase;
+}
+
+/* TABLE WRAPPER -------------------------------------------- */
+.table-wrapper {
+    margin-top: 1px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+    animation: fadeInTable 0.7s ease-in-out;
+}
+
+/* TABLE ----------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #004053;
+    color: white;
+}
+
+thead th {
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: Left;
+    letter-spacing: 0.5px;
+}
+
+/* TEAM ROW COLORS ------------------------------------------ */
+tbody.core-team tr:nth-child(even) {
+    background: rgba(0, 64, 83, 0.12);
+}
+
+tbody.sweep-team tr:nth-child(even) {
+    background: rgba(243, 110, 33, 0.12);
+}
+
+tbody td {
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* BADGES ---------------------------------------------------- */
+.badge {
+    position: relative;
+    padding: 8px 12px;
+    border-radius: 10px;
+    line-height: 1;   /* Prevents badges expanding vertically */
+    font-size: 16px;
+    font-weight: 900;
+    display: inline-block;
+    cursor: default;
+    color: white;
+}
+
+.badge:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    white-space: nowrap;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
+    z-index: 9999;
+}
+
+.badge::after {
+    opacity: 0;
+}
+
+/* Badge Colors */
+.badge-hot { background: #F36E21; }
+.badge-fire { background: #FDB71A; color:black; }
+.badge-power { background: #004053; }
+.badge-crown { background: #F36E21; }
+.badge-rocket { background: #00AEEF; }
+.badge-destroy { background: #b30000; }
+.badge-money { background: #2c8f2c; }
+
+/* CELEBRATION BANNER --------------------------------------- */
+#celebration-banner {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #F36E21;
+    padding: 20px 60px;
+    border-radius: 16px;
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.4);
+    z-index: 9999;
+}
+
+/* ANIMATIONS ----------------------------------------------- */
+@keyframes fadeInTable {
+    from { opacity:0; transform: translateY(10px); }
+    to   { opacity:1; transform: translateY(0); }
+}
+
+/* Rank-Up Green Flash */
+.rank-up {
+    animation: rankUpFlash 5s ease-out;
+}
+
+@keyframes rankUpFlash {
+    0% { background-color: #c3f9c3; }
+    100% { background-color: inherit; }
+}
+
+/* TV MODE ---------------------------------------------------- */
+body.tv-mode {
+    cursor: none;
+}
+
+.tv-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.auto-refresh-note {
+    text-align: center;
+    opacity: 0.8;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Increase table text size for TV visibility */
+.team-table td, 
+.team-table th {
+    font-size: 1.8rem;
+    padding: 10px 14px;
+}
+
+/* Bigger agent names */
+.team-table td:first-child {
+    font-size: 2.0rem;
+    font-weight: 900;
+}
+
+/* Fit dashboard within screen */
+.dashboard-container {
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Row highlight animation after sale */
+.row-highlight {
+    background-color: rgba(253, 183, 26, 0.5) !important; /* branding yellow */
+    transition: background-color 1s ease-out;
+}
+
+
+
+

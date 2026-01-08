@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeSecure Sales Dashboard</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<!-- Celebration Banner -->
+<div id="celebration-banner">🎉 NEW SALE RECORDED! 🎉</div>
+
+<header>
+    <span class="title">HomeSecure Sales Dashboard</span>
+    <a href="sales-form.html" class="add-sale-btn">+ Add Sale</a>
+</header>
+
+<div class="container">
+
+    <!-- KPI CARD SECTION -->
+    <div class="kpi-container">
+
+        <div class="kpi-card">
+            <div class="label">Daily Sales</div>
+            <div class="value" id="kpi-daily">0</div>
+
+            <div class="kpi-target">
+                <span id="kpi-daily-progress">0 / 0</span>
+                <div class="progress-bar">
+                    <div id="kpi-daily-bar" class="progress-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="label">Weekly Sales</div>
+            <div class="value" id="kpi-weekly">0</div>
+
+            <div class="kpi-target">
+                <span id="kpi-weekly-progress">0 / 0</span>
+                <div class="progress-bar">
+                    <div id="kpi-weekly-bar" class="progress-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="label">Monthly Sales</div>
+            <div class="value" id="kpi-monthly">0</div>
+
+            <div class="kpi-target">
+                <span id="kpi-monthly-progress">0 / 0</span>
+                <div class="progress-bar">
+                    <div id="kpi-monthly-bar" class="progress-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="label">Avg Monitoring</div>
+            <div class="value" id="kpi-avg-revenue">€0.00</div>
+
+            <div class="kpi-target">
+                <span id="kpi-avg-revenue-progress">0 / 0</span>
+                <div class="progress-bar">
+                    <div id="kpi-avg-revenue-bar" class="progress-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="kpi-card">
+            <div class="label">Avg Upfront</div>
+            <div class="value" id="kpi-avg-upfront">€0.00</div>
+
+            <div class="kpi-target">
+                <span id="kpi-avg-upfront-progress">0 / 0</span>
+                <div class="progress-bar">
+                    <div id="kpi-avg-upfront-bar" class="progress-inner"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CORE TEAM SECTION -->
+    <h2 class="team-title">CORE Team</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Badges</th>
+                    <th>Daily</th>
+                    <th>Weekly</th>
+                    <th>Monthly</th>
+                    <th>Avg Upfront €</th>
+                    <th>Avg Monitoring €</th>
+                    <th>Yearly</th>
+                    <th>Rank</th>
+                </tr>
+            </thead>
+            <tbody id="core-team-body" class="core-team"></tbody>
+        </table>
+    </div>
+
+    <!-- SWEEP TEAM SECTION -->
+    <h2 class="team-title">SWEEP Team</h2>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Agent</th>
+                    <th>Badges</th>
+                    <th>Daily</th>
+                    <th>Weekly</th>
+                    <th>Monthly</th>
+                    <th>Avg Upfront €</th>
+                    <th>Avg Monitoring €</th>
+                    <th>Yearly</th>
+                    <th>Rank</th>
+                </tr>
+            </thead>
+            <tbody id="sweep-team-body" class="sweep-team"></tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Live sync: no auto refresh needed -->
+<script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>
